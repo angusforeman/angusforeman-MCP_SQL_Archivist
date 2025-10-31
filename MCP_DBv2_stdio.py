@@ -152,7 +152,7 @@ def get_database_schema() -> str:
     - File Properties: file_path, file_name, file_size_bytes, audio_format
     - Tracking: metadata_source, created_at
     
-    For full schema details, see archivedb.md
+    For full schema details, see ./archivedb/archivedb.md
     """
 
 @mcp.tool()
