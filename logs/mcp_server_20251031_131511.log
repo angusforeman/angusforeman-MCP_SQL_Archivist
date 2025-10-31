@@ -1,0 +1,90 @@
+2025-10-31 13:15:11,193 - __main__ - INFO - ================================================================================
+2025-10-31 13:15:11,193 - __main__ - INFO - MCP Server starting...
+2025-10-31 13:15:11,193 - __main__ - INFO - Log file: /home/angusf/_source/MCP_SQL_Archivist/logs/mcp_server_20251031_131511.log
+2025-10-31 13:15:11,193 - __main__ - INFO - Console logging: enabled
+2025-10-31 13:15:11,194 - __main__ - INFO - ================================================================================
+2025-10-31 13:15:11,233 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-10-31 13:15:14,916 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-31 13:15:14,919 - __main__ - INFO - ================================================================================
+2025-10-31 13:15:14,919 - __main__ - INFO - TOOL CALLED: run_SQLquery_duprez_archive
+2025-10-31 13:15:14,919 - __main__ - INFO - INPUT SQL Query: SELECT COUNT(*) AS recording_count FROM audio_files WHERE title = 'A History of the World in 100 Objects';
+2025-10-31 13:15:14,919 - __main__ - INFO - Connecting to database: /home/angusf/_source/MCP_SQL_Archivist/archivedb/archivedb.db
+2025-10-31 13:15:15,023 - __main__ - INFO - Query executed successfully. Columns: ['recording_count']
+2025-10-31 13:15:15,023 - __main__ - INFO - Rows returned: 1
+2025-10-31 13:15:15,023 - __main__ - INFO - First 3 rows (if available): [(0,)]
+2025-10-31 13:15:15,027 - __main__ - INFO - OUTPUT (length: 156 chars):
+Query executed successfully. 1 rows returned.
+
++-------------------+
+|   recording_count |
++===================+
+|                 0 |
++-------------------+...
+2025-10-31 13:15:28,174 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-31 13:15:28,175 - __main__ - INFO - ================================================================================
+2025-10-31 13:15:28,175 - __main__ - INFO - TOOL CALLED: run_SQLquery_duprez_archive
+2025-10-31 13:15:28,175 - __main__ - INFO - INPUT SQL Query: SELECT COUNT(*) AS recording_count FROM audio_files WHERE album = 'A History of the World in 100 Objects' OR description LIKE '%A History of the World in 100 Objects%' OR title LIKE '%History of the World in 100 Objects%' OR series_length = 100;
+2025-10-31 13:15:28,175 - __main__ - INFO - Connecting to database: /home/angusf/_source/MCP_SQL_Archivist/archivedb/archivedb.db
+2025-10-31 13:15:28,209 - __main__ - INFO - Query executed successfully. Columns: ['recording_count']
+2025-10-31 13:15:28,209 - __main__ - INFO - Rows returned: 1
+2025-10-31 13:15:28,209 - __main__ - INFO - First 3 rows (if available): [(103,)]
+2025-10-31 13:15:28,213 - __main__ - INFO - OUTPUT (length: 156 chars):
+Query executed successfully. 1 rows returned.
+
++-------------------+
+|   recording_count |
++===================+
+|               103 |
++-------------------+...
+2025-10-31 13:16:26,280 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-31 13:16:26,280 - __main__ - INFO - ================================================================================
+2025-10-31 13:16:26,281 - __main__ - INFO - TOOL CALLED: run_SQLquery_duprez_archive
+2025-10-31 13:16:26,281 - __main__ - INFO - INPUT SQL Query: SELECT COUNT(*) AS thriller_count FROM audio_files WHERE genre = 'Thriller';
+2025-10-31 13:16:26,281 - __main__ - INFO - Connecting to database: /home/angusf/_source/MCP_SQL_Archivist/archivedb/archivedb.db
+2025-10-31 13:16:26,323 - __main__ - INFO - Query executed successfully. Columns: ['thriller_count']
+2025-10-31 13:16:26,323 - __main__ - INFO - Rows returned: 1
+2025-10-31 13:16:26,323 - __main__ - INFO - First 3 rows (if available): [(0,)]
+2025-10-31 13:16:26,328 - __main__ - INFO - OUTPUT (length: 151 chars):
+Query executed successfully. 1 rows returned.
+
++------------------+
+|   thriller_count |
++==================+
+|                0 |
++------------------+...
+2025-10-31 13:16:35,423 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-31 13:16:35,424 - __main__ - INFO - ================================================================================
+2025-10-31 13:16:35,425 - __main__ - INFO - TOOL CALLED: run_SQLquery_duprez_archive
+2025-10-31 13:16:35,425 - __main__ - INFO - INPUT SQL Query: SELECT DISTINCT genre FROM audio_files ORDER BY genre;
+2025-10-31 13:16:35,425 - __main__ - INFO - Connecting to database: /home/angusf/_source/MCP_SQL_Archivist/archivedb/archivedb.db
+2025-10-31 13:16:35,463 - __main__ - INFO - Query executed successfully. Columns: ['genre']
+2025-10-31 13:16:35,464 - __main__ - INFO - Rows returned: 3
+2025-10-31 13:16:35,464 - __main__ - INFO - First 3 rows (if available): [('Factual',), ('audio books',), ('audiobook',)]
+2025-10-31 13:16:35,469 - __main__ - INFO - OUTPUT (length: 190 chars):
+Query executed successfully. 3 rows returned.
+
++-------------+
+| genre       |
++=============+
+| Factual     |
++-------------+
+| audio books |
++-------------+
+| audiobook   |
++-------------+...
+2025-10-31 13:17:12,260 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-10-31 13:17:12,261 - __main__ - INFO - ================================================================================
+2025-10-31 13:17:12,262 - __main__ - INFO - TOOL CALLED: run_SQLquery_duprez_archive
+2025-10-31 13:17:12,262 - __main__ - INFO - INPUT SQL Query: SELECT COUNT(DISTINCT genre) AS distinct_genre_count FROM audio_files;
+2025-10-31 13:17:12,262 - __main__ - INFO - Connecting to database: /home/angusf/_source/MCP_SQL_Archivist/archivedb/archivedb.db
+2025-10-31 13:17:12,320 - __main__ - INFO - Query executed successfully. Columns: ['distinct_genre_count']
+2025-10-31 13:17:12,320 - __main__ - INFO - Rows returned: 1
+2025-10-31 13:17:12,320 - __main__ - INFO - First 3 rows (if available): [(3,)]
+2025-10-31 13:17:12,328 - __main__ - INFO - OUTPUT (length: 181 chars):
+Query executed successfully. 1 rows returned.
+
++------------------------+
+|   distinct_genre_count |
++========================+
+|                      3 |
++------------------------+...
