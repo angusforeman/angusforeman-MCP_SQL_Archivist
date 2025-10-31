@@ -8,12 +8,23 @@ uv run python azureopenai_mcp_chat.py
 ``` 
 ### Sample queries
 ```In the chat
--Is the DuPrez Audio Archive healthy
---this should return a count of ~150
--How many recordings of A history of the world in 100 objects are there 
---This will likely return 0 as the 100 programmes are actually listed by episode titles, an real world challenge with indexing of real world content
-- Try checking other likely fields in the archive for these episodes  
---This should find the recordings by searching under album or artists fields
+>Is the DuPrez Audio Archive healthy?
+>>this should return a count of ~150
+
+>is a recording of "the birds" in the archive?
+>>this should return a positive response
+
+>are the series of the birds quorom?"
+>>this should activate a business rules lookup to qualify what qurom means
+
+>yes (there is no auto-turn, so you need to give the LLM a chance to apply the rules via SQL)
+>> Should confirm is the recordings are quorum
+
+>How many recordings of A history of the world in 100 objects are there?
+>>This will likely return 0 as the 100 programmes are actually listed by episode titles, an real world challenge with indexing of real world content
+
+>Try checking other likely fields in the archive for these episodes  
+>>This should find the recordings by searching under album or artists fields
 ```
 ### Concepts in the MCP Server
 - healthcheck
