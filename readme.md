@@ -1,6 +1,15 @@
 # SQL Archivist
 Research spike exploring the efficacy of using an MCP Server to encapsulate access to an Archive of content represented by A) SQL data B) unstructured data and C) simple business rules
 
+A lightweight approach that uses two python files - one acting as the chat service which invokes and LLM and reads in a system prompt. The other is the MCP implementation (MCP server filename specified in the .env) which is invoked and initated at runtime. MCP server uses STDIO to communicate. Tool usage is colour coded in the chat UI. It is possibe to adjust any of the following and see the impact with a restart of two lines of python. 
+
+-LLM parameters like temp and top_p
+-System prompt text 
+-MCP implementation
+
+Observability is via ./logs  or by supressing the --quiet flag to see tool execution in the UI (see Observability below)
+
+
 # Running the LLM with MCP to interogate the archive
 Follow the steps below if recreating the environment or building the DB from scratch
 ```bash
@@ -33,6 +42,12 @@ uv run python azureopenai_mcp_chat.py
 - Glossary
 - Business rules
 - Overview 
+
+## Observability
+### watch logs in real time
+```bash
+tail -f logs/mcp_server_*.log
+```
 
 ### logging tools direct to console
 NOTE: The  logging of the MCP server in the console can be suppressed via the .env file 
