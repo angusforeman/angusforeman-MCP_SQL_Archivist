@@ -1,0 +1,27 @@
+# Filename patterns (applied in order)
+filename_patterns:
+  # Pattern: YYYY-MM-DD_Title.mp3
+  - pattern: '(?P<date>\d{4}-\d{2}-\d{2})_(?P<episode>[^.]+)\.mp3'
+    type: regex
+  # Pattern: Chapter NN.mp3
+  - pattern: 'Chapter (?P<chapter>\d+)\.mp3'
+    type: regex
+  # Fallback: use filename as title
+  - pattern: '(?P<title>[^.]+)\.mp3'
+    type: regex
+
+# Folder patterns
+folder_patterns:
+  # Pattern: Author/Program/Year
+  - pattern: '(?P<author>[^/]+)/(?P<program>[^/]+)/(?P<year>\d{4})'
+    type: regex
+  # Pattern: Author/Program
+  - pattern: '(?P<author>[^/]+)/(?P<program>[^/]+)'
+    type: regex
+
+# Content type detection rules
+content_type_rules:
+  - keywords: ['Chapter', 'chapter', 'audiobook']
+    type: 'audiobook'
+  - keywords: ['News', 'Radio', 'Episode']
+    type: 'radio_program'
