@@ -35,8 +35,10 @@ uv run python azureopenai_mcp_chat.py
 - Overview 
 
 ### ligging tools direct to console
-NOTE: The  logging of the MCP server in the console can be suppressed via the .env file MCP_SERVER_PARAMS=--quiet
-
+NOTE: The  logging of the MCP server in the console can be suppressed via the .env file 
+```.env
+MCP_SERVER_PARAMS=--quiet
+```
 
 # Runtime setup
 ```bash
