@@ -6,7 +6,7 @@ Follow the steps below if recreating the environment or building the DB from scr
 ```bash
 uv run python azureopenai_mcp_chat.py
 ``` 
-Sample queries
+### Sample queries
 ```In the chat
 -Is the DuPrez Audio Archive healthy
 --this should return a count of ~150
@@ -14,6 +14,15 @@ Sample queries
 --This will likely return 0 as the 100 programmes are actually listed by episode titles, an real world challenge with indexing of real world content
 - Try checking other likely fields in the archive for these episodes  
 --This should find the recordings by searching under album or artists fields
+```
+### Concepts in the MCP Server
+- healthcheck
+- SQL query
+- Schema query
+- Glossary
+- Business rules
+- Overview 
+
 
 # Runtime setup
 ```bash
