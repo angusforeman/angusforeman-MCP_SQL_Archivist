@@ -34,7 +34,7 @@ uv run python azureopenai_mcp_chat.py
 - Business rules
 - Overview 
 
-### ligging tools direct to console
+### logging tools direct to console
 NOTE: The  logging of the MCP server in the console can be suppressed via the .env file 
 ```.env
 MCP_SERVER_PARAMS=--quiet
@@ -46,10 +46,11 @@ uv add duckdb
 uv addd mcp[cli]
 ```
 # Azure resource setup
+```
 Set up Azure OpenAI Chat GPT5 instance 
-update .env file based on the template and the Azure servive details
-you can use the default LLM and MCPserver details
-``
+Update .env file based on the template and the Azure servive details
+Use  the default LLM and MCPserver details from template
+```
 
 # create new archiveDB and reimport of sample data
 will be necessary if pulling fresh from repo
