@@ -12,3 +12,6 @@ wheels/
 
 #logs
 logs/
+
+#Duck DB instance
+archivedb/archivedb.db

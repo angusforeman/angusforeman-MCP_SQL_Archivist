@@ -18,6 +18,7 @@ Sample queries
 # Runtime setup
 ```bash
 uv add duckdb
+uv addd mcp[cli]
 ```
 # Azure resource setup
 Set up Azure OpenAI Chat GPT5 instance 
@@ -25,7 +26,8 @@ update .env file based on the template and the Azure servive details
 you can use the default LLM and MCPserver details
 ``
 
-# archiveDB setup
+# create new archiveDB and reimport of sample data
+will be necessary if pulling fresh from repo
 ```bash
 cd archivedb
 uv run python create_archivedb.py #create table structure & indexes
